@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import SavedResults from "../components/SavedResults"
+import Navbar from "../components/Navbar"
 
 function Books() {
   // Setting our component's initial state
@@ -9,7 +11,7 @@ function Books() {
   // Load all books and store them with setBooks
   useEffect(() => {
     loadBooks()
-  }, [])
+  }, [books])
 
   // Loads all books and sets them to books
   function loadBooks() {
@@ -20,12 +22,23 @@ function Books() {
       .catch(err => console.log(err));
   };
 
+   // Deletes a book from the database with a given id, then reloads books from the db
+    // function deleteBook(id) {
+    //     API.deleteBook(id)
+    //         .then(res => {
+    //             console.log(res);
+    //         })
+    //         .catch(err => console.log(err));
+    // }
+
+    // {books.length>0 ? (<SavedResults results={books} deleteFunc={deleteBook}/>) : <h1> No results to display </h1>}
+
     return (
         <div className="container">
         <Navbar />
         <Jumbotron />
-        <br />
-        {books.length>0 ? (<Results isSearchPage={false} results={books} />) : <h1> No results to display </h1>}
+        <br />  
+        {books.length>0 ? (<SavedResults results={books}/>) : <h1> No results to display </h1>}
     </div>
     );
   }

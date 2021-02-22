@@ -5,9 +5,9 @@ function Jumbotron() {
   return (
     <div className="jumbotron">
       <h1>(React) Google Book Search</h1>
-      <p>
+      <h4>
         Search for and save books of interest
-      </p>
+      </h4>
     </div>
   );
 }

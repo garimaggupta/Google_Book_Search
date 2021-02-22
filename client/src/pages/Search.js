@@ -10,6 +10,7 @@ function Search() {
     // Setting our component's initial state
     const [books, setBooks] = useState([])
     const [title, setTitle] = useState()
+    const [noresultsmsg, setNoResultsMsg] = useState();
 
 
     // Handles updating component state when the user types into the input field
@@ -24,6 +25,7 @@ function Search() {
                 {
                      //console.log(res);
                      setBooks(res.data.items);
+                     setNoResultsMsg("No Results to Display")
                 })
             .catch(err => console.log(err));
     };
@@ -45,7 +47,7 @@ return (
             handleFormSubmit={handleFormSubmit}
             handleInputChange={handleInputChange}
         /> <br/> <br />
-        {books.length>0 ? (<Results isSearchPage={true} results={books} />) : <h1> No results to display </h1>}
+        {books.length>0 ? (<Results results={books} />) : <h2> {noresultsmsg} </h2>}
         
     </div>
 );
