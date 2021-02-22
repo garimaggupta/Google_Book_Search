@@ -1,29 +1,51 @@
-# Create React Express App
+# React Google Books Search App
 
-## About This Boilerplate
+## Table of Contents
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+* [About the Project](#about-the-project)
+* [Technology](#Technology)
+* [Installation](#installation)
+* [Database_Schema](#database-schema)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [Deployment](#Deployment)
+* [Contact](#contact)
+* [LinkedIn](#LinkedIn)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
-## Starting the app locally
+## About the Project:
+The app allows the users to search the books by title using Google Book Search APIs. Additionally users have the capability to maintain their own Books library by saving the books they like to read later. Saved books data is saved in backend Mongo database.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+![Screenshot1](assets/screenshot1.png)
 
-```
-npm install
-```
+![Screenshot2](assets/screenshot2.png)
 
-This should install node modules within the server and the client folder.
+### Technology:
+This app is build with [Node.js](https://nodejs.org/en/), [Google APIs](https://www.googleapis.com/books/v1/volumes?q=title:the%20book%title) and [Mongoose](https://www.npmjs.com/package/mongoose) and deployed on Heroku (using Mongo Atlas).
 
-After both installations complete, run the following command in your terminal:
+## Database Schema
 
-```
-npm start
-```
+![database_schema](assets/schema.png)
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+### Installation:
+Clone the Repository and run 'npm i' to install all dependencies.
 
-## Deployment (Heroku)
+## Roadmap:
+Currently no known issues, but track [open issues](https://github.com/garimaggupta/Google_ook_Search/issues) for proposed features (and known issues) in the future.  
+  
+## Contributing:
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Deployment:
+This App is deployed on Heroku. Click here for the [link](https://react-books-searches.herokuapp.com/) of the deployed application.
+
+## Contact:
+garimaggupta@gmail.com
+
+## LinkedIn:
+[https://www.linkedin.com/in/garima-gupta-b3464b2/](https://www.linkedin.com/in/garima-gupta-b3464b2/)
