@@ -16,16 +16,16 @@
 ## About the Project:
 The app allows the users to search the books by title using Google Book Search APIs. Additionally users have the capability to maintain their own Books library by saving the books they like to read later. Saved books data is saved in backend Mongo database.
 
-![Screenshot1](assets/screenshot1.png)
+![Screenshot1](assets/screenshot1.PNG)
 
-![Screenshot2](assets/screenshot2.png)
+![Screenshot2](assets/screenshot2.PNG)
 
 ### Technology:
 This app is build with [Node.js](https://nodejs.org/en/), [Google APIs](https://www.googleapis.com/books/v1/volumes?q=title:the%20book%title) and [Mongoose](https://www.npmjs.com/package/mongoose) and deployed on Heroku (using Mongo Atlas).
 
 ## Database Schema
 
-![database_schema](assets/schema.png)
+![database_schema](assets/schema.PNG)
 
 ### Installation:
 Clone the Repository and run 'npm i' to install all dependencies.
