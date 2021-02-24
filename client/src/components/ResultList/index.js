@@ -46,7 +46,7 @@ function ResultList(props) {
                 <div className="col-2 col-md-2 col-sm-2">
                     <button className="btn-primary btn-md" onClick={viewBooks}>View</button>
                     {props.searchPage ? <button className="btn-primary btn-md mr-2" onClick={saveBook}>Save</button> :
-                        <button className="btn-primary btn-md mr-2" >Delete</button>}
+                        <button className="btn-primary btn-md mr-2" onClick={() => props.deleteFunc(props.bookid)}>Delete</button>}
                 </div>
             </div>
             <div className="row">
